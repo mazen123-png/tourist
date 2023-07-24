@@ -1,0 +1,139 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+  }
+  
+  /* Navbar styles */
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 50px;
+  }
+  .auth-buttons{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Switcher Tab styles */
+  .switcher-tab {
+    margin-top: 50px;
+    
+  }
+  @media(max-width:1000px) {
+    .switcher-tab{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .switcher-tab ul{
+        background-color: transparent;
+    }
+    
+  }
+  @media (max-width:500px) {
+    .mainImage,.footer{
+        width: 595px;
+    }
+    .switcher-tab li{
+        padding: 4px 8px;
+    }
+  }
+  
+  .switcher-tab ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+  }
+  
+  .switcher-tab li {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .switcher-tab li:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .switcher-tab li a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* Footer styles  */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #007bff;
+    padding: 20px;
+    color: #fff;
+    
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .footer h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #f2f2f2;
+  }
