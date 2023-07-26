@@ -4,31 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <!-- NAV Bar -->
-  <nav class="navbar">
-    <div class="logo">Logo</div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container d-flex justify-content-space-between">
+      <a class="logo navbar-brand" id="imageLogo" href="#"><img src="./Logo.png" width="100" height="100" alt="logo"></a>
+      <button class="navbar-toggler" type="button" id="navbarToggleBtn">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       
-    <div class="auth-buttons">
-      <span class="USA_flag"><img src="./usa flag.png" width="40" height="30" alt="" /></span>
-      <button class="sign-in">Sign in</button>
-      <button class="sign-up">Sign up</button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul id="navbar-nav" class="navbar-nav auth-buttons">
+            <span id="content-flag" style="margin-bottom: 10px;margin-top: 10px;" class="USA_flag"><span>Language:</span><img src="./usa flag.png" width="40" height="30" alt="" /></span>
+            <button id="sign-in" class="nav-link sign-in">Sign in</button>
+            <button id="sign-up" class="nav-link sign-up">Sign up</button>
+        </ul>
+        
+      </div>
     </div>
   </nav>
+
+  <!-- Rest of your content here -->
+
+  <!-- Add Bootstrap JS and jQuery (required for Bootstrap JS) -->
+  <!-- Add Custom JavaScript -->
+  
 
   <!-- Switcher Tab -->
   <div class="switcher-tab">
 
     <ul>
-      <li>Hotel</li>
-      <li>Flight</li>
-      <li>Car Rental</li>
-      <li>Attractions</li>
-      <li>Taxi</li>
-      <li>Tourism Medical OGC &gt;&gt; <a href="https://optionscare.net/" target="_blank">Turkey</a></li>
-      <li>Tourism Education &gt;&gt; <a href="https://wassel.com.tr/" target="_blank">Turkey</a>, <a href="https://wassel.com.tr/" target="_blank">Malaysia</a>, <a href="https://wassel.com.tr/" target="_blank">South Africa</a></li>
+      <li><a href="./hotel.html">Hotel</a></li>
+      <li><a href="./flight.html">Flight</a></li>
+      <li><a href="./carRental.html">Car Rental</a></li>
+      <li><a href="./attraction.html">Attractions</a></li>
+      
+      <li><a href="./AirPortTaxi.html">Taxi</a></li>
+      <li>Tourism Medical OGC &gt;&gt; <a href="./tourismMedical.html" target="_blank">Turkey</a></li>
+      <li>Tourism Education &gt;&gt; <a href="./Education.html" target="_blank">Turkey</a>, <a href="./Education.html" target="_blank">Malaysia</a>, <a href="./Education.html" target="_blank">South Africa</a></li>
     </ul>
   </div>
   <img src="./mainImage.jpg" height="500" style="display: flex;" width="100%" class="mainImage" alt="Tourism image">
@@ -52,26 +68,56 @@
         <li>Booking.com for Business</li>
       </ul>
     </div>
-    <div class="footer-section">
-      <h4>Terms and settings</h4>
-      <ul>
-        <li>Privacy &amp; cookies</li>
-        <li>Terms &amp; conditions</li>
-        <li>Partner dispute</li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h4>About</h4>
-      <ul>
-        <li>About Us</li>
-        <li>How We Work</li>
-        <li>Sustainability</li>
-        <li>Press Center</li>
-        <li>Careers</li>
-        <li>Investor relations</li>
-        <li>Corporate contact</li>
-      </ul>
+    <div class="footer-second-group">
+      <div class="footer-section">
+        <h4>Terms and settings</h4>
+        <ul>
+          <li>Privacy &amp; cookies</li>
+          <li>Terms &amp; conditions</li>
+          <li>Partner dispute</li>
+        </ul>
+      </div>
+      <div class="footer-section about-section">
+        <h4>About</h4>
+        <ul>
+          <li>About Us</li>
+          <li>How We Work</li>
+          <li>Sustainability</li>
+          <li>Press Center</li>
+          <li>Careers</li>
+          <li>Investor relations</li>
+          <li>Corporate contact</li>
+        </ul>
+      </div>
     </div>
   </footer>
+  <!-- Add Bootstrap JS and jQuery (required for Bootstrap JS) -->
+  <script>
+    const navbarToggleBtn = document.getElementById("navbarToggleBtn");
+    const signUpBtn = document.getElementById('sign-up')
+    const signInBtn = document.getElementById('sign-in')
+    const navbarNav = document.getElementById("navbar-nav")
+    const imageLogo = document.getElementById("imageLogo")
+    function toggleNavbar() {
+    
+    signUpBtn.style.cssText = `
+    background-color: #007bff;
+    width: 100%; color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    `
+    signInBtn.style.cssText = `
+            color: #fff;
+            background-color: #007bff;
+            width: 100%;
+    `
+    const navbar = document.getElementById("navbarNav");
+    navbar.classList.toggle("show");
+  }
+
+  // Attach the click event to the navbar toggle button
+
+  navbarToggleBtn.addEventListener("click", toggleNavbar);
+  </script>
 </body>
 </html>
